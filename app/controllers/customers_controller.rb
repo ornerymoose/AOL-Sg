@@ -19,8 +19,8 @@ class CustomersController < ApplicationController
 	end
 
 	def non_pb
-		@customer_name = ENV["non_pb_customers_name"]
-		@cust_email = ENV["non_pb_customers_email"]
+		@customer_name = ENV["non_pb_customers_name"].split(",")
+		@cust_email = ENV["non_pb_customers_email"].split(",")
 
 		@name = ""
 		combined = @cust_email.zip(@customer_name)
