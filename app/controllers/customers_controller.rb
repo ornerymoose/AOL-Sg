@@ -27,7 +27,7 @@ class CustomersController < ApplicationController
 		combined.each do |group|
 			email = group[0]
 			@name = group[1]
-			#UserNotifier.send_non_pb_email(email, @name).deliver_now
+			UserNotifier.send_non_pb_email(email, @name).deliver_now
 		end
 	end
 
