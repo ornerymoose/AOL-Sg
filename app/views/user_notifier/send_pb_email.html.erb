@@ -1,0 +1,102 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+.BODY {
+    font-family: Calibri, Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.NEWS {
+    font-family: Calibri, Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.Table {
+    background-color: #e0e1e2;
+    border: thin solid #000;
+}
+
+ul{
+    padding-left:20px;
+    font-weight:bold;
+    list-style-type:square!important;
+}
+
+li{
+    display:block;
+    text-decoration:none;
+    padding-left:60px;
+}
+</style>
+</head>
+
+<body>
+<table width="200" border="0">
+   <tr>
+      <td height="554">
+         <table width="600" border="0">
+            <tr>
+               <td width="290">
+                  <p class="BODY">Dear <strong><%= @name %></strong>,</p>
+                  <p class="BODY">Your latest Summit Broadband monthly billing statement is now available online for you to review and pay. 
+                  </p>
+                  <p class="BODY">Payment is due by <strong><%= Date.today.next_month.strftime("%^B") %> 20th.</strong></p>
+               </td>
+               <td width="300">
+                    <%= email_image_tag("SBBLogoPantoneTaglineOL.jpg", size: "245x112") %>
+               </td>
+            </tr>
+         </table>
+         <table width="600"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+               <td width="307" class="BODY">
+                  <p>        
+                     <a href="https://webcare.summit-broadband.com">Click here</a> to view and manage your account online.  Once logged in, you will be able to view your current and past monthly billing statements, make a payment, view payment history, and more. </br>
+                  </p>
+               </td>
+            </tr>
+         </table>
+         <table width="600" height="119" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+               <td width="290" class="BODY" style="float:left;">
+                  Call us today to enroll in AutoPay if you haven't already and never worry about late fees or  writing a check again.
+                  <br /><br />
+                  <b><u>Other payment options:</u></b>
+                  <ul style="margin-bottom:-0px;">&#8226; &nbsp; <u>Phone:</u></ul>
+                  <li>Pelican Bay: (239) 529-1500</li>
+                  <li>Pelican Bay: (844) 220-5424</li>
+                  </ul>
+                  <ul style="margin-bottom:-0px;">&#8226; &nbsp; <u>Mail:</u></ul>
+                  <li>Summit Broadband</li>
+                  <li>P.O. Box 10822</li>
+                  <li>Naples, FL 34101-0822</li>
+                  </ul>
+               </td>
+               <td width="297">
+                <table width="297" style="margin-top:-40px; border:solid; border-color:#666; border-width:1px;">
+                    <tr>
+                        <td>
+                  <table width="292" border="0" align="right" cellpadding="5" cellspacing="2" class="Table">
+                     <tr>
+                        <td>
+                           <p class="NEWS">Not registered for Summit Broadband account management?  <a href="https://webcare.summit-broadband.com/esp/Registration">Click here </a>to register now!</p>
+                           <p class="NEWS">For any questions or concerns, please reply to this email or contact us at (239) 529-1500 or (844) 220-5424. </p>
+                           <p class="NEWS">Our customer service agents are available 24/7 and will be more than happy to assist you.</p>
+                        </td>
+                     </tr>
+                  </table>
+                  </td>
+                  </tr>
+                  </table>
+              </td>
+            </tr>
+         </table>
+         <%= email_image_tag("Bg.png", size: "600x99") %>
+      </td>
+   </tr>
+</table>
+</body>
+</html>
