@@ -22,11 +22,10 @@ class CustomersController < ApplicationController
 		@customer_name = ENV["non_pb_customers_name"].split(",")
 		@cust_email = ENV["non_pb_customers_email"].split(",")
 
-		@name = ""
+		@name = "CUSTOMER"
 		combined = @cust_email.zip(@customer_name)
 		combined.each do |group|
 			email = group[0]
-			@name = group[1]
 			UserNotifier.send_non_pb_email(email, @name).deliver_now
 		end
 	end
