@@ -11,7 +11,7 @@ class CustomersController < ApplicationController
 		combined.each do |group|
 			email = group[0]
 			@name = group[1]
-			UserNotifier.send_pb_email(email, @name).deliver_now
+			#UserNotifier.send_pb_email(email, @name).deliver_now
 		end
 	end
 
@@ -22,14 +22,31 @@ class CustomersController < ApplicationController
 		@customer_name = ENV["non_pb_customers_name"].split(",")
 		@cust_email = ENV["non_pb_customers_email"].split(",")
 
-		@name = "CUSTOMER"
 		combined = @cust_email.zip(@customer_name)
+		@name = "CUSTOMER"
+		logger.debug "COMBINED"
+		logger.debug combined.length
 		combined.each do |group|
 			email = group[0]
-			UserNotifier.send_non_pb_email(email, @name).deliver_now
+			#UserNotifier.send_non_pb_email(email, @name).deliver_now
 		end
 	end
 
-	def non_pb_send
+	def dais
+		@customer_name = ENV["dais_customers_name"].split(",")
+		@cust_email = ENV["dais_customers_email"].split(",")
+
+		combined = @cust_email.zip(@customer_name)
+		@name = "CUSTOMER"
+		logger.debug "COMBINED"
+		logger.debug combined.length
+		combined.each do |group|
+			email = group[0]
+			UserNotifier.send_dais_email(email, @name).deliver_now
+		end
 	end
+
+	def dais_send
+	end
+
 end

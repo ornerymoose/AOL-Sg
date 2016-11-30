@@ -10,4 +10,9 @@ class UserNotifier < ApplicationMailer
 		@name = customer_name
     	mail(:to => customer_email, :subject => "Your Summit Broadband Bill")
   	end  	
+
+  	def send_dais_email(customer_email, customer_name)
+		@name = customer_name
+    	mail(:to => customer_email, :subject => "Your DAIS Bill")
+  	end  	
 end
