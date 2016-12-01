@@ -16,3 +16,5 @@
 !/log/.keep
 /tmp
 config/app_ev.rb
+app/assets/.DS_Store
+.DS_Store
