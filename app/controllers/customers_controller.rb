@@ -42,7 +42,7 @@ class CustomersController < ApplicationController
 		logger.debug combined.length
 		combined.each do |group|
 			email = group[0]
-			UserNotifier.send_dais_email(email, @name).deliver_now
+			#UserNotifier.send_dais_email(email, @name).deliver_now
 		end
 	end
 
