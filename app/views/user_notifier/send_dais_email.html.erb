@@ -4,95 +4,73 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Untitled Document</title>
         <style type="text/css">
-            .BODY {
+            body {
                 font-family: Calibri, Verdana, Geneva, sans-serif;
                 font-size: 14px;
             }
-            .NEWS {
-                font-family: Calibri, Verdana, Geneva, sans-serif;
-                font-size: 14px;
+            .container {
+                width: 600px;
             }
-            .Table {
+            
+            .left-side, .right-side {
+                width: 300px;
+            }
+            .left-side {
+                float: left;
+            }
+            .right-side {
+                float: right;
+                margin-top: -18px;
+            }
+            .clear {
+                clear: both;
+            }
+            .not-registered {
                 background-color: #e0e1e2;
                 border: thin solid #000;
-            }
-            ul {
-                padding-left:20px;
-                font-weight:bold;
-                list-style-type:square!important;
-            }
-
-            li {
-                display:block;
-                text-decoration:none;
-                padding-left:60px;
+                padding: 10px;
             }
         </style>
     </head>
 
     <body>
-        <table width="200" border="0">
-            <tr>
-                <td height="554">
-                    <table width="600" border="0">
-                        <tr>
-                            <td width="290">
-                                <p class="BODY">Dear <%= @name %><strong></strong>,</p>
-                                <p class="BODY">Your latest Dais monthly billing statement is now available online for you to review and pay.</p>
-                                <p class="BODY">Payment is due by <strong>December 20th, 2016. </strong></p>
-                            </td>
-                            <td width="300">
-                                <%= email_image_tag("dais-logo.jpg", size: "320x175") %>
-                            </td>
-                        </tr>
-                    </table>
+        <div class="container">
+            <div class="left-side">
+                <p>Dear CUSTOMER,</p>
 
-                    <table width="600"  border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="307" class="BODY">
-                                <p>        
-                                    <a href="https://daisonlinebillpay.daistechnologies.com/esp/security/login?ReturnUrl=https%3a%2f%2fdaisonlinebillpay.daistechnologies.com%2fesp">Click here</a> to view and manage your account online.  Once logged in, you will be able to view your current and past monthly billing statements, make a payment, view payment history, and more. </br>
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <table width="600" height="119" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td width="290" class="BODY" style="float:left;">
-                                Call us today to enroll in AutoPay if you haven't already and never worry about late fees.
-                                <br /><br />
-                                <u><strong>Other payment options:</strong></u><br><br>
-                                <strong>Phone:</strong> (800) 376-9715
-                                <br><br>
-                                <strong>Mail:</strong><br>
-                                <address>
-                                Dais<br>
-                                4558 35th Street<br>
-                                Orlando FL 32811<br>
-                                </address>
-                            </td>
-                            <td width="297">
-                                <table width="297" style="margin-top:-30px; border:solid; border-color:#666; border-width:1px;">
-                                    <tr>
-                                        <td>
-                                            <table width="292" border="0" align="right" cellpadding="5" cellspacing="2" class="Table">
-                                                <tr>
-                                                    <td>
-                                                        <p class="NEWS">Not registered for Dais account management?  <a href="http://www.daistechnologies.com/residential/">Click here </a>to register now!</p>
-                                                        <p class="NEWS">For any questions or concerns, please reply to this email or contact us at (800) 376-9715. </p>
-                                                        <p class="NEWS">Our customer service agents are available 24/7 and will be more than happy to assist you.</p>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+                <p>
+                    Your latest Dais monthly billing statement is now available online for you to review and pay
+                </p>
+                <p>
+                    Payment is due by <strong>December 20th, 2016.</strong>
+                </p>
+            </div>
+            <div class="right-side">
+                 <%= email_image_tag("dais-logo.jpg", size: "320x175") %>
+            </div>
+            <div class="clear"></div>
+            <hr />
+            <div id="click-here">                    
+                <a href="https://daisonlinebillpay.daistechnologies.com/esp/security/login?ReturnUrl=https%3a%2f%2fdaisonlinebillpay.daistechnologies.com%2fesp">Click here</a> to view and manage your account online. Once logged in, 
+                you will be able to view your current and past monthly billing statements, make a payment, view payment history, and more. 
+            </div>
+            <p>
+                Call us today to enroll in AutoPay if you haven't already and never worry about late fees. 
+            </p>        
+            <div class="not-registered">
+                <p>Not registered for Dais account management? <a href="https://daisonlinebillpay.daistechnologies.com/esp/Registration">Click here</a> to register now!</p>
+                <p>For any questions or concerns, please reply to this email or contact us at (800) 376-9715.</p>
+                <p>Our customer service agents are available 24/7 and will be more than happy to assist you.</p>
+            </div>
+            <p class="other-payment-options">
+                <strong><u>Other Payment Options:</u></strong>
+                <p>
+                    <strong>Phone: </strong> (800) 376-9715
+                </p>
+                <p>
+                    <strong>Mail: </strong> DAIS, 4558 35th Street, Orlando FL 32811
+                </p>
+            </p>
+        </div>
     </body>
 </html>
