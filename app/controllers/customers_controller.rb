@@ -26,7 +26,7 @@ class CustomersController < ApplicationController
 		@name = "CUSTOMER"
 		combined.each do |group|
 			email = group[0]
-			#UserNotifier.send_non_pb_email(email, @name).deliver_now
+			UserNotifier.send_non_pb_email(email, @name).deliver_now
 		end
 	end
 
@@ -40,7 +40,7 @@ class CustomersController < ApplicationController
 		logger.debug combined.length
 		combined.each do |group|
 			email = group[0]
-			UserNotifier.send_dais_email(email, @name).deliver_now
+			#UserNotifier.send_dais_email(email, @name).deliver_now
 		end
 	end
 
