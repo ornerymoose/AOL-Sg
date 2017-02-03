@@ -13,7 +13,7 @@ module CustomersHelper
       UserNotifier.send_non_pb_email(customer).deliver_now
       puts "#{$.}, sent to #{customer}"
     end
-	end
+  end
 
   #dais send_dais_email
   def send_dais_email(csv_file)
