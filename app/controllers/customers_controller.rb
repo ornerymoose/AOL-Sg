@@ -1,23 +1,20 @@
 class CustomersController < ApplicationController
+
+  include CustomersHelper
+
 	def home
 	end
 
 	def pb
-		ENV["pb_customers_email"].split(",").each do |email|
-			#UserNotifier.send_pb_email(email).deliver_now
-		end
+		send_pb_email("pb_esp.csv")
 	end
 
 	def non_pb
-		ENV["non_pb_customers_email"].split(",").each do |email|
-			UserNotifier.send_non_pb_email(email).deliver_now
-		end
+    send_summit_email("sum_esp.csv")
 	end
 
 	def dais
-		ENV["dais_customers_email"].split(",").each do |email|		
-			#UserNotifier.send_dais_email(email).deliver_now
-		end
+		send_dais_email("dais_esp.csv")
 	end
 
 end

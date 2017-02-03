@@ -19,3 +19,4 @@ config/app_ev.rb
 app/assets/.DS_Store
 .DS_Store
 app/views/user_notifier/send_dais_standard_email.html.erb
+public/*.csv
