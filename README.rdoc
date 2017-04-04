@@ -1,3 +1,5 @@
 == README
 
 Application for sending monthly billing notifications
+
+cron task for clearing log:  * * * * cd /var/www/AOL-Sg/log && > development.log
