@@ -22,4 +22,12 @@ module CustomersHelper
       puts "#{$.}, sent to #{customer}"
     end
   end
+
+  #irmaupdate
+  def send_irma_email(csv_file)
+    CSV.foreach("#{Rails.root}/public/#{csv_file}") do |customer|
+      UserNotifier.send_irma_email(customer).deliver_now
+      puts "#{$.}, sent to #{customer}"
+    end
+  end
 end
