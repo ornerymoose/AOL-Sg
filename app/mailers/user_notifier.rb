@@ -14,6 +14,6 @@ class UserNotifier < ApplicationMailer
   end  	
 
   def send_irma_email(customer_email)
-    mail(:to => customer_email, :subject => "Hurricane Irma Update")
+    mail(:to => customer_email, :subject => "Summit Broadband Update on Hurricane Irma")
   end   
 end
