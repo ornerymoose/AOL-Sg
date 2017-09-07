@@ -12,4 +12,8 @@ class UserNotifier < ApplicationMailer
   def send_dais_email(customer_email)
     mail(:to => customer_email, :subject => "Your DAIS Bill")
   end  	
+
+  def send_irma_email(customer_email)
+    mail(:to => customer_email, :subject => "Hurricane Irma Update")
+  end   
 end
