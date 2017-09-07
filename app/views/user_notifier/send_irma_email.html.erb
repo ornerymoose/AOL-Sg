@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+.BODY {
+    font-family: Calibri, Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.NEWS {
+    font-family: Calibri, Verdana, Geneva, sans-serif;
+    font-size: 14px;
+}
+.Table {
+    background-color: #e0e1e2;
+    border: thin solid #000;
+}
+
+ul{
+    padding-left:20px;
+    font-weight:bold;
+    list-style-type:square!important;
+}
+
+li{
+    display:block;
+    text-decoration:none;
+    padding-left:60px;
+}
+</style>
+</head>
+
+<body>
+<table width="200" border="0">
+   <tr>
+      <td height="554">
+         <table width="600" border="0">
+            <tr>
+               <td width="290">
+                  <p class="BODY">Summit Broadband Customers,</p>
+                  <p class="BODY">Your latest Summit Broadband monthly billing statement is now available online for you to review and pay. 
+                  </p>
+                  <p class="BODY">Payment is due by <strong>September 20th, 2017.</strong></p>
+               </td>
+               <td width="300">
+                    <%= email_image_tag("SBBLogoPantoneTaglineOL.jpg", size: "245x112") %>
+               </td>
+            </tr>
+         </table>
+         <table width="600"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+               <td width="307" class="BODY">
+                  <p>        
+                     Summit Broadband has activated our business continuity plan and is closely monitoring conditions associated with Hurricane Irma for any impact to our customers or our network. All preparations and precautions have been taken, and procedures put into place to maximize the ability of our company to respond in a timely manner to any effects from the hurricane. 
+                  </p>
+                  <p>
+                      In addition, Summit Broadband’s network equipment, located on your premises, is protected by an Uninterruptible Power System (UPS). This UPS will provide approximately four hours of continued up-time for the network equipment should you lose commercial power to your site. <strong>As we strive to maintain continuous service during and after any impact from the storm, we ask that you do not disconnect this equipment from your site’s commercial power, or that in the event you leave your facility, you do not shut off commercial power.</strong> Either action would trigger the UPS to start and would prematurely drain the batteries, which would cause a service interruption to both your services and Summit Broadband’s network.  
+                  </p>
+                  <p>
+                    We sincerely appreciate your help and support and remain committed to providing you the most robust network possible.
+                  </p>
+                  <p>
+                      If you have any questions about Summit Broadband’s preparedness activity, please contact our Commercial Service Center (CSC) at 877-244-0242 or your Account Manager. 
+                  </p>
+                  <p>Thank you</p>
+                  <p>
+                    Summit Broadband<br>
+                    Commercial Services
+                    </p>
+               </td>
+            </tr>
+         </table>
+         <!-- <img src="/images/Bg.png" alt="" width="600" height="99" />   -->
+         <%= email_image_tag("Bg.png", size: "600x99") %>
+      </td>
+   </tr>
+</table>
+</body>
+</html>
