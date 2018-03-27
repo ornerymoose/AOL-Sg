@@ -15,9 +15,5 @@ class CustomersController < ApplicationController
   def dais
     send_dais_email("dais_esp.csv")
   end
-
-  def irma
-     send_irma_email("irma_list.csv") 
-  end
   
 end
