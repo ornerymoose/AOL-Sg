@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'tiny_tds'
+gem 'activerecord-sqlserver-adapter'
+
